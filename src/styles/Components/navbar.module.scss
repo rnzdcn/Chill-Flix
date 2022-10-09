@@ -1,0 +1,38 @@
+.nav{
+  height: 80px;
+  background: rgba(0,0,0,0.5);
+  .nav_container{
+    display: flex;
+    align-items: center;
+    height: inherit;
+    .flex{
+      width: 100%;
+      justify-content: space-between;
+
+      .brand_link{
+        cursor: pointer;
+        display: flex;
+        max-width:180px;
+        height: inherit;
+      }
+
+      .nav_list_container{
+        display: flex;
+        align-items: center;
+
+        text-transform: uppercase;
+        .link{
+          padding-inline: 2rem ;
+          cursor: pointer;
+        }
+        .btn_link{
+          padding-inline: 2.5rem;
+          padding-block:1.5rem;
+          cursor: pointer;
+          background-color: #e5091490;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

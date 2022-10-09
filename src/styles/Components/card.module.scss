@@ -1,0 +1,43 @@
+.flex{
+  max-width: 200px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.24) 0 3px 8px;
+  .wrapper{
+    max-width: 250px;
+  }
+  .content{
+    margin-inline:10px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    text-align: left;
+
+    .flex_content{
+      align-items: flex-end;
+
+      .ratings{
+        margin-inline-start: 5px;
+        margin-block-start: 0;
+        font-size: clamp(12px, 1.4vw, 16px);
+        letter-spacing: 0.75px;
+      }
+    }
+
+    .title{
+      margin-block-start: 5px;
+      font-size: clamp(12px, 1.4vw, 16px);
+      letter-spacing: 0.75px;
+    }
+  }
+}
+
+@media only screen and (max-width: 479px){
+  .flex{
+    width: 150px;
+    .wrapper{
+      width: 150px;
+    }
+  }
+}

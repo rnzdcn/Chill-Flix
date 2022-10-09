@@ -1,0 +1,99 @@
+.main{
+  .banner_area{
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("../../../public/assets/background/bg.jpg"), no-repeat, center;
+    background-size: cover;
+    .content_area{
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content{
+        display: inherit;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        .title{
+          margin-block-end: 15px;
+          font-size: clamp(1.75rem, 5vw, 3.75rem);
+          line-height: clamp(2rem, 5vw, 6rem);
+        }
+        .subtitle{
+          margin-block-end: 15px;
+          font-size: clamp(1rem, 3vw, 1.625rem);
+          line-height: clamp(2rem, 3vw, 2.5rem);
+          font-weight: 600;
+        }
+
+        .form_control{
+          .label{
+            margin-block-end: 15px;
+            font-size: clamp(1rem, 1vw, 1.2rem);
+            line-height: clamp(1rem, 1vw, 2rem);
+            font-weight: 400;
+          }
+
+          .input_group{
+            height: 60px;
+            background: #ffffff;
+
+            .input{
+              height: inherit;
+              padding-inline-end: 11rem;
+              border-radius: 0;
+              border: none;
+              color: #121212;
+
+              font-size: clamp(1rem, 1vw, 1.2rem);
+              line-height: clamp(1rem, 1vw, 2rem);
+              font-weight: 400;
+            }
+            .input:focus{
+              box-shadow: none;
+            }
+            .input_right_element{
+              height: inherit;
+              width: 10rem;
+              background: #e50914;
+              .btn_get_started{
+                height: inherit;
+                width: inherit;
+                background: inherit;
+                border-radius:0;
+
+                font-size: clamp(1rem, 1vw, 1.2rem);
+                line-height: clamp(1rem, 1vw, 2rem);
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (max-width: 479px){
+  .main{
+    .banner_area{
+      .content_area{
+        .content{
+          .form_control{
+            .input_group{
+              height: 44px;
+              .input{
+                padding-inline-end: 9rem;
+              }
+              .input_right_element{
+                width: 8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
