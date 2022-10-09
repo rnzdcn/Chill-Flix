@@ -11,7 +11,7 @@ import MovieCard from "../components/movieCard";
 
 const Home: NextPage = () => {
   const {trendingMovies} = useContext(MovieDBContext)
-  console.log(trendingMovies.data)
+
   return (
     <MainComponent title={'Home | ChillFlix'}>
       <SubComponent>
