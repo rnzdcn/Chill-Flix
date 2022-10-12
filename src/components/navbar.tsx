@@ -17,11 +17,11 @@ const Navbar = () => {
           </Link>
 
           <Box className={stl.nav_list_container}>
-            <Box className={stl.link}>
-              <Link href={''} passHref>
-                Movies
-              </Link>
-            </Box>
+            {/*<Box className={stl.link}>*/}
+            {/*  <Link href={''} passHref>*/}
+            {/*    Movies*/}
+            {/*  </Link>*/}
+            {/*</Box>*/}
 
             {
               mobileView &&

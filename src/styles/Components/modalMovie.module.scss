@@ -1,0 +1,118 @@
+.modalOverlay{
+  opacity: 0.8;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.content{
+  margin-inline: 2rem;
+  background: transparent!important;
+  .body{
+    padding: 30px;
+    background: black;
+    .flex{
+      .img_container{
+        max-height: 300px;
+        max-width: 250px;
+
+        .img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .desc_container{
+        margin-inline-start: 2rem;
+        .desc_flex{
+          flex-direction: column;
+          .header_flex{
+            justify-content: space-between;
+            align-items: center;
+            .wrapper{
+              display: flex;
+              .title{
+                font-size: clamp(24px, 3vw, 32px);
+                font-weight: 900;
+              }
+              .img_wrapper{
+                margin-inline: 1rem;
+                align-items: center;
+                .star_icon{
+                  height: 22px;
+                }
+                .ratings{
+                  margin-inline-start:5px;
+                  font-size: clamp(10px, 1.4vw, 12px);
+                  letter-spacing: 0.75px;
+                }
+              }
+            }
+
+            .icon_btn{
+              background: transparent;
+            }
+            .icon_btn:hover{
+              background: none;
+            }
+          }
+          .overview{
+            margin-block: 15px 10px;
+            color: #ffffff80;
+            font-size: clamp(12px, 2vw, 14px);
+          }
+
+          .overview_desc{
+            color: #ffffff90;
+            font-size: clamp(13px, 2vw, 16px);
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 479px){
+  .content{
+    margin-inline:1rem;
+    .body{
+      padding: 15px;
+      padding-inline: 10px;
+
+      .flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .img_container{
+          max-width: 150px;
+          height: auto;
+          margin-block-end: 15px;
+        }
+
+        .desc_container{
+          margin-inline-start: 0;
+          .desc_flex{
+            .header_flex{
+              .wrapper{
+
+                .img_wrapper{
+                  margin-inline: 0.5rem;
+                  .star_icon{
+                    height: 18px;
+                  }
+                  .ratings{
+                    margin-inline-start:3px;
+                  }
+                }
+              }
+            }
+            .overview{
+              margin-block: 10px 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

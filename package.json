@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "app": "next dev -H 0.0.0.0 -p 3000",
+    "app": "next dev -H 0.0.0.0 -p 4001",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p 4000",
     "lint": "next lint",
@@ -12,6 +12,8 @@
   "dependencies": {
     "@capacitor/android": "^4.3.0",
     "@capacitor/core": "^4.3.0",
+    "@capacitor/share": "^4.0.1",
+    "@chakra-ui/icons": "^2.0.11",
     "@chakra-ui/react": "^2.3.5",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
