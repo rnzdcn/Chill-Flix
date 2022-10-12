@@ -1,7 +1,18 @@
 import React, {useContext} from "react";
 import _ from 'lodash'
 
-import {Modal, ModalOverlay, ModalContent, ModalBody, Flex, Box, Image, Text, IconButton} from '@chakra-ui/react'
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  Flex,
+  Box,
+  Image,
+  Text,
+  IconButton,
+  useBreakpointValue
+} from '@chakra-ui/react'
 import stl from '../styles/Components/modalMovie.module.scss'
 
 import {MovieDBContext} from "../providers/MovieDBProvider";
@@ -15,7 +26,7 @@ interface IModalMovie {
 
 const ModalMovie:React.FC<IModalMovie> = ({isOpen, onClose, movieData}) => {
   const {fetchMovieById} = useContext(MovieDBContext)
-
+  const isMobile = useBreakpointValue({base:true, sm: false}, {ssr:false})
   const share = async (movie: any) => {
     await Share.share({
       title: movie.title,
@@ -52,14 +63,18 @@ const ModalMovie:React.FC<IModalMovie> = ({isOpen, onClose, movieData}) => {
                       </Flex>
                     </Box>
 
-                    <IconButton
-                      className={stl.icon_btn}
-                      aria-label='Previous Icon'
-                      size={{base: 'sm', lg: 'md'}}
-                      onClick={() => share(movieData)}
-                    >
-                      <Image src={'/assets/icons/share.svg'} alt={'share icon'}/>
-                    </IconButton>
+                    {
+                      isMobile &&
+                        <IconButton
+                          className={stl.icon_btn}
+                          aria-label='Previous Icon'
+                          size={{base: 'sm', lg: 'md'}}
+                          onClick={() => share(movieData)}
+                        >
+                          <Image src={'/assets/icons/share.svg'} alt={'share icon'}/>
+                        </IconButton>
+                    }
+
                   </Flex>
 
                   <Text className={stl.overview}>Overview</Text>
